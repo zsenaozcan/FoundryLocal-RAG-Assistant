@@ -1,0 +1,6 @@
+Title: Django (2017)
+Genres: Drama
+Director: Etienne Comar
+Main Cast: Reda Kateb, Cécile de France, Àlex Brendemühl, Maximilien Poullein, Ulrich Brandhoff
+
+Overview: The story of Django Reinhardt, famous guitarist and composer, and his flight from German-occupied Paris in 1943.

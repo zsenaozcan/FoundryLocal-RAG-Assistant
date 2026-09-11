@@ -1,0 +1,7 @@
+Title: Django the Bastard (1969)
+Genres: Action, Thriller, Western
+Director: Sergio Garrone
+Main Cast: Anthony Steffen, Paolo Gozlino, Luciano Rossi, Teodoro Corrà, Jean Louis
+Keywords: revenge, spaghetti western, django, ghost
+
+Overview: A Union soldier returns from the dead to take revenge on three officers who betrayed his unit in battle.

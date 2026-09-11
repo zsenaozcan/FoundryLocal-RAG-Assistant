@@ -1,0 +1,7 @@
+Title: The Rise and Rise of Bitcoin (2014)
+Genres: Documentary, History
+Director: Nicholas Mross
+Main Cast: Gavin Andresen, Brian Armstrong, Margaux Avedisian, Vitalik Buterin, Mike Caldwell
+Keywords: technology, money
+
+Overview: A documentary about the development and spread of the virtual currency called Bitcoin.

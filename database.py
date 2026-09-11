@@ -9,14 +9,18 @@ def init_db(db_name=DB_NAME):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
 
-    # source column: stores which file each chunk came from
-    # (needed for the "show sources" feature planned for Week 4)
+    # source: which file this chunk came from (needed for citations later)
+    # chunk_index: this chunk's position within its source file
+    # UNIQUE(source, chunk_index): lets bulk ingestion use INSERT OR IGNORE
+    # as a safety net, on top of the Python-level resume check
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS documents (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             source TEXT,
+            chunk_index INTEGER,
             content TEXT NOT NULL,
-            embedding TEXT NOT NULL
+            embedding TEXT NOT NULL,
+            UNIQUE(source, chunk_index)
         )
     ''')
 

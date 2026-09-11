@@ -1,0 +1,7 @@
+Title: Sunspring (2016)
+Genres: Science Fiction
+Director: Oscar Sharp
+Main Cast: Thomas Middleditch, Humphrey Ker, Elisabeth Gray
+Keywords: experimental film, nonsense
+
+Overview: Sunspring is a short film about three people living in a weird future, possibly on a space station, probably in a love triangle. You know it's the future because H (played with neurotic gravity by Silicon Valley's Thomas Middleditch) is wearing a shiny gold jacket, H2 (Elisabeth Gray) is playing with computers, and C (Humphrey Ker) announces that he has to "go to the skull" before sticking his face into a bunch of green lights. It sounds like your typical sci-fi B-movie, complete with an incoherent plot. Except Sunspring isn't the product of Hollywood hacks—it was written entirely by an AI. To be specific, it was authored by a recurrent neural network called long short-term memory, or LSTM for short. At least, that's what we'd call it. The AI named itself Benjamin.

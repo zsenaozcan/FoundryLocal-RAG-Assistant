@@ -1,0 +1,7 @@
+Title: A Good American (2016)
+Genres: Documentary
+Director: Friedrich Moser
+Main Cast: William Binney, Thomas Drake, Edward Loomis, Jesselyn Radack, Diane Roark
+Keywords: bureaucracy, spy, national security agency (nsa), spying, greed, government, illegality, conspiracy, surveillance, september 11 2001
+
+Overview: A Good American tells the story of the best code-breaker the USA ever had and how he and a small team within NSA created a surveillance tool that could pick up any electronic signal on earth, filter it for targets and render results in real-time while keeping the privacy as demanded by the US constitution.

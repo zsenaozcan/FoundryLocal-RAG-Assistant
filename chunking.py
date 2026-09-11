@@ -88,8 +88,12 @@ def process_docs_folder(docs_folder=DOCS_FOLDER):
     for filename, content in load_txt_files(docs_folder):
         chunks = chunk_text(content)
         print(f"'{filename}' -> split into {len(chunks)} chunks.")
-        for chunk in chunks:
-            all_chunks.append({"source": filename, "content": chunk})
+        for index, chunk in enumerate(chunks):
+            all_chunks.append({
+                "source": filename,
+                "chunk_index": index,
+                "content": chunk,
+            })
 
     print(f"\nTotal: {len(all_chunks)} chunks created.")
     return all_chunks

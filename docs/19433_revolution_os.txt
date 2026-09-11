@@ -1,0 +1,7 @@
+Title: Revolution OS (2001)
+Genres: Documentary
+Director: J.T.S. Moore
+Main Cast: Susan Egan, Linus Torvalds, Richard M. Stallman, Eric S. Raymond, Bruce Perens
+Keywords: hacker, history, linux, gnu, free software, open source
+
+Overview: REVOLUTION OS tells the inside story of the hackers who rebelled against the proprietary software model and Microsoft to create GNU/Linux and the Open Source movement.

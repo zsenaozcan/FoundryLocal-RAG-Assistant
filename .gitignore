@@ -2,3 +2,5 @@ __pycache__/
 *.sqlite
 *.db
 .env
+data/
+rag_assistant.db
