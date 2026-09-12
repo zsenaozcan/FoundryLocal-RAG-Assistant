@@ -14,7 +14,7 @@ from foundry_local_sdk import Configuration, FoundryLocalManager
 
 APP_NAME = "rag-assistant"
 EMBEDDING_MODEL_ALIAS = "qwen3-embedding-0.6b"
-CHAT_MODEL_ALIAS = "qwen2.5-0.5b"
+CHAT_MODEL_ALIAS = "qwen2.5-1.5b"
 
 _manager = None
 _embedding_model = None
@@ -79,6 +79,12 @@ def get_chat_client():
     _chat_model.download()
     _chat_model.load()
     _chat_client = _chat_model.get_chat_client()
+
+    # temperature=0.0: more deterministic, less prone to making things up
+    # max_tokens: caps response length - without this the model can run on
+    # for a long time, which is slower and often rambles off-topic
+    _chat_client.settings.temperature = 0.0
+    _chat_client.settings.max_tokens = 150
 
     print("Chat client ready.")
     return _chat_client

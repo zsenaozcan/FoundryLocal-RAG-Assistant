@@ -3,6 +3,15 @@ import math
 from foundry_manager import get_embedding
 from database import get_connection
 
+# qwen3-embedding is an instruction-tuned embedding model: for retrieval,
+# it expects the QUERY (not the document) to be wrapped with a task
+# instruction like this. Documents are embedded plain - this is why
+# ingest_bulk.py did NOT need any instruction wrapper, only search does.
+QUERY_INSTRUCTION = (
+    "Instruct: Given a question about a movie, retrieve the movie "
+    "description that answers it\nQuery:{query}"
+)
+
 
 def cosine_similarity(v1, v2, magnitude1=None):
     """Computes the cosine similarity between two vectors.
@@ -25,7 +34,8 @@ def search_database(query, top_k=1):
     print(f"\nQuery: '{query}'")
     print("Converting query to a vector...")
 
-    query_vector = get_embedding(query)
+    instructed_query = QUERY_INSTRUCTION.format(query=query)
+    query_vector = get_embedding(instructed_query)
     # Compute the query vector's magnitude ONCE, don't repeat it in the loop
     query_magnitude = math.sqrt(sum(x * x for x in query_vector))
 

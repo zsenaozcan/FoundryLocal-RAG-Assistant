@@ -1,11 +1,24 @@
-from foundry_local_sdk import Configuration, FoundryLocalManager
-	
-FoundryLocalManager.initialize(Configuration(app_name="my-app"))
-model = FoundryLocalManager.instance.catalog.get_model("qwen2.5-0.5b")
-model.download(); model.load()
-client = model.get_chat_client()
+"""
+Entry point for the offline movie RAG assistant.
 
-response = client.complete_chat([
-    {"role": "user", "content": "Hello!"}
-])
-print(response.choices[0].message.content)
+Run with: python main.py
+"""
+
+from assistant import answer_query
+
+
+def main():
+    print("Local Movie RAG Assistant - type 'exit' to quit.\n")
+    while True:
+        question = input("Ask a question about a movie: ").strip()
+        if question.lower() in ("exit", "quit"):
+            break
+        if not question:
+            continue
+
+        answer = answer_query(question)
+        print(f"\nAssistant: {answer}\n")
+
+
+if __name__ == "__main__":
+    main()
